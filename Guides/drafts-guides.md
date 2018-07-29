@@ -37,3 +37,20 @@ Comandos:
 - Python commands: `py loquequierasejecutar`
 - Links Up/Down: Tirar un enlace: `link s1 h1 down (o up)`
 - Ver terminales: `xterm h1`
+
+-------------------------------------------------------------------------------------
+
+Ryu:
+
+Instalar Ryu: `sudo apt install python-pip` `pip install ryu`
+
+Nota: para ejecutar, hacerlo en /home/ser/ryu 
+
+---------------------------------------------------------------------------------------
+
+In-Band: SDN Control
+
+
+
+
+
