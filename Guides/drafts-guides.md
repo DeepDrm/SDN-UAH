@@ -50,6 +50,17 @@ Nota: para ejecutar, hacerlo en /home/ser/ryu
 
 In-Band: SDN Control
 
+Note: Todos los gráficos han sido creados mediante draw.io.
+
+1. Creación por defecto de Mininet: 
+
+Topología de 3 switch conectados a un controlador:
+
+Todos ellos cuentan con una conexión TCP al controlador y además se interconectan entre ellos. Para su creación; `sudo mn
+
+![Alt text](https://github.com/DeepDrm/SDN-UAH/blob/develop/Images/In-band-Sw-TCP-ALL.jpg)
+
+
 
 
 
