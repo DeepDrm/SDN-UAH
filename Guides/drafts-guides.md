@@ -60,6 +60,15 @@ Todos ellos cuentan con una conexión TCP al controlador y además se interconec
 
 ![Alt text](https://github.com/DeepDrm/SDN-UAH/blob/develop/Images/Out-of-band-Sw-TCP-ALL.jpg)
 
+-------------------------------------------------------------------------------------------------------------------
+In-Band topology:
+
+![Alt Text](https://github.com/DeepDrm/SDN-UAH/blob/develop/Images/In-Band-TCP-ppal.jpg)
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+Paper In-band:
 
 Link paper sobre In-band:
 https://www.researchgate.net/publication/291952929_In-band_control_queuing_and_failure_recovery_functionalities_for_openflow
