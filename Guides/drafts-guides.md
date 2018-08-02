@@ -61,7 +61,37 @@ Todos ellos cuentan con una conexión TCP al controlador y además se interconec
 ![Alt text](https://github.com/DeepDrm/SDN-UAH/blob/develop/Images/In-band-Sw-TCP-ALL.jpg)
 
 
+Link paper sobre In-band:
+https://www.researchgate.net/publication/291952929_In-band_control_queuing_and_failure_recovery_functionalities_for_openflow
 
+REF: Sharma, Sachin & Staessens, Dimitri & Colle, Didier & Pickavet, Mario & Demeester, Piet. (2016). In-band control, queuing, and failure recovery functionalities for openflow. IEEE Network. 30. 106-112. 10.1109/MNET.2016.7389839. 
+
+Resumen:
+
+Requisitos:
+
+1. Cada Sw necesita su propia IP.
+2. Cada Sw debe conocer la IP y puerto TCP del controlador.
+3. Se debe configurar el path de los Sw no conectados directamente al controlador.
+
+Soluciones:
+
+- 1. y 2. : 
+        - Cada Sw ejecuta un cliente DHCP
+        - Cada Sw ejecuta un hybrid stack para su propio tráfico DHCP.
+        - Serv. DHCP se configura con vendor-especific option con la IP y puerto de Co.
+        - DHCP server en el Co.
+- 3. :
+        - DHCP serv. establece path en los Sw que ya tienen una sesión OpenFlow.
+
+Realización:
+
+1. Notificación de los parámetros de red requeridos:
+2. Establecimiento de conexión TCP con Co.
+3. Establecimiento sesión OpenFlow.
+4. Descubrimiento topología.
+
+![Alt Text](https://github.com/DeepDrm/SDN-UAH/blob/develop/Images/D-Estados-PaperIn-Band.jpg)
 
 
 
