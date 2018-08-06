@@ -56,7 +56,7 @@ Note: Todos los gráficos han sido creados mediante draw.io.
 
 Topología de 3 switch conectados a un controlador:
 
-Todos ellos cuentan con una conexión TCP al controlador y además se interconectan entre ellos. Para su creación; `sudo mn
+Todos ellos cuentan con una conexión TCP al controlador y además se interconectan entre ellos.
 
 ![Alt text](https://github.com/DeepDrm/SDN-UAH/blob/develop/Images/Out-of-band-Sw-TCP-ALL.jpg)
 
