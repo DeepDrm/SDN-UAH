@@ -68,7 +68,7 @@ In-Band topology:
 -------------------------------------------------------------------------------------------------------------------
 
 
-Paper In-band:
+Paper In-band (Sharma):
 
 Link paper sobre In-band:
 https://www.researchgate.net/publication/291952929_In-band_control_queuing_and_failure_recovery_functionalities_for_openflow
@@ -101,6 +101,27 @@ Realización:
 4. Descubrimiento topología.
 
 ![Alt Text](https://github.com/DeepDrm/SDN-UAH/blob/develop/Images/D-Estados-PaperIn-Band.jpg)
+
+--------------------------------------------------------------------------------------------------
+
+Topología a realizar:
+
+![Alt Text](https://github.com/DeepDrm/SDN-UAH/blob/develop/Images/In-Band-investppal.jpeg.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
