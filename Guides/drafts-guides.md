@@ -108,6 +108,38 @@ Topología a realizar:
 
 ![Alt Text](https://github.com/DeepDrm/SDN-UAH/blob/develop/Images/In-Band-investppal.jpeg.jpg)
 
+Creación de la topología:
+
+Ref:  https://blog.scottlowe.org/2013/09/04/introducing-linux-network-namespaces/
+http://www.opencloudblog.com/?p=386 http://www.opencloudblog.com/?p=130
+
+1. Creación de los namespaces:
+
+Creo 3 namespaces, h1,h2 y c0. `sudo ip netns add "nombre-del-ns"`.
+
+2. Creación de los OVS e interconexión:
+
+Creo 3 switches, sw1,sw2,sw3. `sudo ovs-vsctl add-br 
+"nombre-del-sw".
+
+Para conectarlos en una topología linear empleo patch ports. `sudo ovs-vsctl add-port "swX" "interfaz" -- set Interface "interfaz" type=patch options:peer="interfaz del otro switch"`
+
+3. Conexión de los switches con los host:
+
+Creo una interfaz en cada switch para conectarla a h1,h2 y c0. `ovs-vsctl add-port "swX" "interfaz" -- set Interface "interfaz" type=internal`. 
+
+Para linkear la interfaz con los host , debo linkearla a los respectivos namespaces. `sudo ip link set "interfaz" netns "namespace"`.
+
+Debo activar las interfaces que ya pertenecen a los namespace (que se puede ver con `sudo ip link show`). `sudo ip netns exec "namespace" ip link set dev "interfaz" up`.
+
+Nota: Para abrir terminales `sudo ip netns exec "namespace" xterm &` ; con esto ejecutaríamos comando desde el terminal ppal `sudo ip netns exec "namespace" "comando-a-ejecutar"`.
+
+
+
+
+
+
+
 
 
 
