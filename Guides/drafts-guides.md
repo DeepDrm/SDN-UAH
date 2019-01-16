@@ -119,8 +119,7 @@ Creo 3 namespaces, h1,h2 y c0. `sudo ip netns add "nombre-del-ns"`.
 
 2. Creación de los OVS e interconexión:
 
-Creo 3 switches, sw1,sw2,sw3. `sudo ovs-vsctl add-br 
-"nombre-del-sw".
+Creo 3 switches, sw1,sw2,sw3. `sudo ovs-vsctl add-br "nombre-del-sw".
 
 Para conectarlos en una topología linear empleo patch ports. `sudo ovs-vsctl add-port "swX" "interfaz" -- set Interface "interfaz" type=patch options:peer="interfaz del otro switch"`
 
