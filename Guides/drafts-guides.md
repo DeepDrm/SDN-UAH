@@ -132,7 +132,14 @@ Para linkear la interfaz con los host , debo linkearla a los respectivos namespa
 Debo activar las interfaces que ya pertenecen a los namespace (que se puede ver con `sudo ip link show`). `sudo ip netns exec "namespace" ip link set dev "interfaz" up`.
 
 Nota: Para abrir terminales `sudo ip netns exec "namespace" xterm &` ; con esto ejecutaríamos comando desde el terminal ppal `sudo ip netns exec "namespace" "comando-a-ejecutar"`.
+-----------------------------------------------------------------
+Consejo de investigador internacional:
 
+I have followed this tutorial to create virtual networks using linux kernel features. Open vSwitch supports in-band control out-of-the-box. Therefore, mininet should also be able to do this but I find creating the networks manually to be a lot more flexible.
+
+I have created three hosts in different network namespaces and ran ryu controller with learning switch app on h3. The hosts, h1, h2 and h3 are connected with switches s1, s2 and s3 respectively. The switches are connected in a linear topology.
+
+Normally, when all links are operational, the controller receives packet_in messages, flows get installed (verified by ovs-ofctl) and ping works. Then, when any link in the path to controller is down (e.g. by ifconfig s1-eth1 down), packet_in messages doesn't reach the controller anymore. Also the connection with controller can be checked with ovs-vsctl show command and I have found the is_connected status to be as expected (e.g. true when all links in the path is up and vice versa).
 
 
 
